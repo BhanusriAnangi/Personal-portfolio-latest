@@ -129,7 +129,7 @@ export default function Hero() {
           className="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto items-center justify-center"
         >
           <a
-            href="/A bhanusri.pdf"
+            href="/Bhanu resume.pdf"
             download="Anangi_Bhanu_Sri_Resume.pdf"
             className="flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-indigo-600 dark:bg-indigo-500 text-white font-medium rounded-xl hover:bg-indigo-700 dark:hover:bg-indigo-600 shadow-lg hover:shadow-indigo-500/25 transition-all hover:scale-105 active:scale-95"
           >
