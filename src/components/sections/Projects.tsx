@@ -7,6 +7,35 @@ import CaseStudyModal, { ProjectData } from "../CaseStudyModal";
 
 const projects: ProjectData[] = [
   {
+    title: "SyncDocs",
+    tagline: "Collaborative, offline-first document editor with CRDT conflict resolution and AI writing tools.",
+    category: "Full Stack",
+    overview: "A highly sophisticated local-first document editing platform engineered for seamless collaborative writing. Featuring real-time editing powered by Yjs CRDTs, local-first data persistence with Dexie.js (IndexedDB), and background synchronization via a transactional outbox pattern, it delivers a zero-latency editor experience that functions flawlessly offline and resolves conflicts deterministically upon reconnection.",
+    problem: "Real-time collaborative editors suffer from severe UI latency under poor network conditions, risk data loss during network disruptions, and introduce complex merge conflict friction when multiple offline contributors edit the same content.",
+    solution: "Designed an offline-first architecture integrating Dexie.js for local client storage and Yjs CRDT logic for mathematical state convergence. Configured a background sync engine that uses a transactional outbox queue with exponential backoff and jitter. Synchronized changes are merged and persisted server-side with Prisma and PostgreSQL, while Auth.js handles document-level access permissions.",
+    features: [
+      "Local-first document editing using Dexie.js & IndexedDB local caching",
+      "Real-time, conflict-free collaborative editing with Yjs CRDTs",
+      "Background synchronization engine using transactional outbox and backoff",
+      "Type-safe synchronization API routes validated with Zod schemas",
+      "Granular role-based access control (Owner/Editor/Viewer) via Auth.js",
+      "Built-in AI-assisted writing tools for text expansion and refinement",
+      "Version history with immutable snapshots and restoration system",
+    ],
+    responsibilities: [
+      "Architected the local-first synchronization workflow and Dexie database schemas.",
+      "Integrated Yjs state vector encoding and decoding for client-server sync.",
+      "Engineered the offline outbox sync engine queue with retry logic and jitter.",
+      "Designed secure Next.js Route Handlers with Auth.js and Zod validations.",
+      "Configured a GitHub Actions CI/CD pipeline for automated testing and builds.",
+    ],
+    tech: ["Next.js 16", "TypeScript", "Tailwind CSS", "Yjs", "Dexie.js", "Prisma", "PostgreSQL", "Auth.js", "Zod", "GitHub Actions"],
+    challenges: "Handling concurrent, large binary updates from multiple offline users without blocking the server or causing data loss. Resolved by implementing compact binary state vector merges, validating payload sizes under Zod limits, and running conflict resolution in memory before executing database writes.",
+    impact: "Achieved 0ms UI lag during edits, enabled complete offline productivity, and established a green-badge CI/CD automated pipeline.",
+    demo: "https://sync-docs-rho.vercel.app/",
+    github: "https://github.com/BhanusriAnangi/SyncDocs",
+  },
+  {
     title: "Aptronix E-commerce Platform",
     tagline: "Live Apple Reseller Shopify storefront optimization and custom component architecture.",
     category: "Shopify",

@@ -60,14 +60,13 @@ const skillsData = [
     glowColor: "from-amber-500/20 to-orange-500/20",
     skills: [
       { name: "Git & GitHub", level: 90 },
+      { name: "GitHub Actions (CI/CD)", level: 85 },
       { name: "Postman", level: 95 },
       { name: "VS Code", level: 95 },
-      { name: "Firebase", level: 80 },
-      { name: "Azure Cloud", level: 75 },
       { name: "AWS Services", level: 70 },
       { name: "Vercel Deployments", level: 90 },
-      { name: "Webflow", level: 75 },
-      { name: "WordPress", level: 80 },
+      { name: "Firebase & Azure", level: 78 },
+      { name: "Webflow & WordPress", level: 80 },
     ],
   },
 ];
